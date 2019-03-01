@@ -16,4 +16,6 @@ class MarketVC: UIViewController {
     
     // USER INTERFACE
     override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
+    
+    // NETWORK SETUP
 }
