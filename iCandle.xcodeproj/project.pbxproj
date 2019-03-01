@@ -14,8 +14,8 @@
 		D1CFF27E22271CB80034FE9F /* MarketVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CFF27D22271CB80034FE9F /* MarketVC.swift */; };
 		D1CFF28022271CF20034FE9F /* MoversVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CFF27F22271CF20034FE9F /* MoversVC.swift */; };
 		D1CFF28222271D180034FE9F /* IndicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CFF28122271D180034FE9F /* IndicesVC.swift */; };
-		D1CFF28422271D900034FE9F /* DummyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CFF28322271D900034FE9F /* DummyVC.swift */; };
-		D1CFF28622271DA50034FE9F /* KomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CFF28522271DA50034FE9F /* KomVC.swift */; };
+		D1CFF28422271D900034FE9F /* PortfolioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CFF28322271D900034FE9F /* PortfolioVC.swift */; };
+		D1CFF28622271DA50034FE9F /* LogsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CFF28522271DA50034FE9F /* LogsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +28,8 @@
 		D1CFF27D22271CB80034FE9F /* MarketVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketVC.swift; sourceTree = "<group>"; };
 		D1CFF27F22271CF20034FE9F /* MoversVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoversVC.swift; sourceTree = "<group>"; };
 		D1CFF28122271D180034FE9F /* IndicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicesVC.swift; sourceTree = "<group>"; };
-		D1CFF28322271D900034FE9F /* DummyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyVC.swift; sourceTree = "<group>"; };
-		D1CFF28522271DA50034FE9F /* KomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KomVC.swift; sourceTree = "<group>"; };
+		D1CFF28322271D900034FE9F /* PortfolioVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioVC.swift; sourceTree = "<group>"; };
+		D1CFF28522271DA50034FE9F /* LogsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +88,8 @@
 				D1CFF27D22271CB80034FE9F /* MarketVC.swift */,
 				D1CFF27F22271CF20034FE9F /* MoversVC.swift */,
 				D1CFF28122271D180034FE9F /* IndicesVC.swift */,
-				D1CFF28322271D900034FE9F /* DummyVC.swift */,
-				D1CFF28522271DA50034FE9F /* KomVC.swift */,
+				D1CFF28322271D900034FE9F /* PortfolioVC.swift */,
+				D1CFF28522271DA50034FE9F /* LogsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -181,10 +181,10 @@
 			files = (
 				D1CFF27E22271CB80034FE9F /* MarketVC.swift in Sources */,
 				D1CFF28022271CF20034FE9F /* MoversVC.swift in Sources */,
-				D1CFF28622271DA50034FE9F /* KomVC.swift in Sources */,
+				D1CFF28622271DA50034FE9F /* LogsVC.swift in Sources */,
 				D1CFF28222271D180034FE9F /* IndicesVC.swift in Sources */,
 				D1CFF2692227159D0034FE9F /* AppDelegate.swift in Sources */,
-				D1CFF28422271D900034FE9F /* DummyVC.swift in Sources */,
+				D1CFF28422271D900034FE9F /* PortfolioVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
