@@ -1,5 +1,5 @@
 //
-//  KomVC.swift
+//  DummyVC.swift
 //  iCandle
 //
 //  Created by Eashan on 2/28/19.
@@ -8,11 +8,10 @@
 
 import UIKit
 
-class KomVC: UIViewController {
-    
+class PortfolioVC: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     // USER INTERFACE
