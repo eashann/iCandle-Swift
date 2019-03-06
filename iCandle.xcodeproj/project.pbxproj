@@ -20,6 +20,7 @@
 		D1CFF28222271D180034FE9F /* IndicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CFF28122271D180034FE9F /* IndicesVC.swift */; };
 		D1CFF28422271D900034FE9F /* PortfolioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CFF28322271D900034FE9F /* PortfolioVC.swift */; };
 		D1CFF28622271DA50034FE9F /* LogsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CFF28522271DA50034FE9F /* LogsVC.swift */; };
+		EB2DAF67222FE458002AF0E1 /* BasicAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2DAF66222FE458002AF0E1 /* BasicAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		D1CFF28122271D180034FE9F /* IndicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicesVC.swift; sourceTree = "<group>"; };
 		D1CFF28322271D900034FE9F /* PortfolioVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioVC.swift; sourceTree = "<group>"; };
 		D1CFF28522271DA50034FE9F /* LogsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsVC.swift; sourceTree = "<group>"; };
+		EB2DAF66222FE458002AF0E1 /* BasicAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				D1C5F259222F01CB000E8887 /* Constant.swift */,
+				EB2DAF66222FE458002AF0E1 /* BasicAlert.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				D1CFF28622271DA50034FE9F /* LogsVC.swift in Sources */,
 				D1C5F25D222F022F000E8887 /* LoginModel.swift in Sources */,
 				D1CFF28222271D180034FE9F /* IndicesVC.swift in Sources */,
+				EB2DAF67222FE458002AF0E1 /* BasicAlert.swift in Sources */,
 				D1CFF2692227159D0034FE9F /* AppDelegate.swift in Sources */,
 				D1C5F258222EFF4C000E8887 /* TabbarVC.swift in Sources */,
 				D1CFF28422271D900034FE9F /* PortfolioVC.swift in Sources */,
