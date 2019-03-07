@@ -22,6 +22,11 @@
 		D1CFF28622271DA50034FE9F /* LogsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CFF28522271DA50034FE9F /* LogsVC.swift */; };
 		EB2DAF67222FE458002AF0E1 /* BasicAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2DAF66222FE458002AF0E1 /* BasicAlert.swift */; };
 		EBC44ABA22300833000F9666 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC44AB922300833000F9666 /* ResetPasswordVC.swift */; };
+		EBDE44792230F75B0029A144 /* FavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDE44782230F75B0029A144 /* FavVC.swift */; };
+		EBDE447B2230F8480029A144 /* KSE30VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDE447A2230F8480029A144 /* KSE30VC.swift */; };
+		EBDE447D2230F8870029A144 /* KMI30VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDE447C2230F8870029A144 /* KMI30VC.swift */; };
+		EBDE44822230F9A00029A144 /* KSE30Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDE44812230F9A00029A144 /* KSE30Cell.swift */; };
+		EBDE44842230F9B50029A144 /* KMI30Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDE44832230F9B50029A144 /* KMI30Cell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,13 +40,18 @@
 		D1CFF26F222715AF0034FE9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1CFF272222715AF0034FE9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1CFF274222715AF0034FE9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D1CFF27D22271CB80034FE9F /* MarketVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketVC.swift; sourceTree = "<group>"; };
+		D1CFF27D22271CB80034FE9F /* MarketVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketVC.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		D1CFF27F22271CF20034FE9F /* MoversVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoversVC.swift; sourceTree = "<group>"; };
 		D1CFF28122271D180034FE9F /* IndicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicesVC.swift; sourceTree = "<group>"; };
 		D1CFF28322271D900034FE9F /* PortfolioVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioVC.swift; sourceTree = "<group>"; };
 		D1CFF28522271DA50034FE9F /* LogsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsVC.swift; sourceTree = "<group>"; };
 		EB2DAF66222FE458002AF0E1 /* BasicAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAlert.swift; sourceTree = "<group>"; };
 		EBC44AB922300833000F9666 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
+		EBDE44782230F75B0029A144 /* FavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavVC.swift; sourceTree = "<group>"; };
+		EBDE447A2230F8480029A144 /* KSE30VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KSE30VC.swift; sourceTree = "<group>"; };
+		EBDE447C2230F8870029A144 /* KMI30VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMI30VC.swift; sourceTree = "<group>"; };
+		EBDE44812230F9A00029A144 /* KSE30Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KSE30Cell.swift; sourceTree = "<group>"; };
+		EBDE44832230F9B50029A144 /* KMI30Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMI30Cell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +141,7 @@
 			children = (
 				D1C5F253222EFEBC000E8887 /* Auth */,
 				D1C5F254222EFEC6000E8887 /* Main */,
+				EBDE44772230F7300029A144 /* Market */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -138,6 +149,7 @@
 		D1CFF27B222715D90034FE9F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EBDE447E2230F9120029A144 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,6 +160,25 @@
 				D1C5F25B222F0222000E8887 /* Auth */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EBDE44772230F7300029A144 /* Market */ = {
+			isa = PBXGroup;
+			children = (
+				EBDE44782230F75B0029A144 /* FavVC.swift */,
+				EBDE447A2230F8480029A144 /* KSE30VC.swift */,
+				EBDE447C2230F8870029A144 /* KMI30VC.swift */,
+			);
+			path = Market;
+			sourceTree = "<group>";
+		};
+		EBDE447E2230F9120029A144 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EBDE44812230F9A00029A144 /* KSE30Cell.swift */,
+				EBDE44832230F9B50029A144 /* KMI30Cell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBDE44822230F9A00029A144 /* KSE30Cell.swift in Sources */,
 				D1CFF27E22271CB80034FE9F /* MarketVC.swift in Sources */,
 				D1CFF28022271CF20034FE9F /* MoversVC.swift in Sources */,
 				D1C5F25A222F01CB000E8887 /* Constant.swift in Sources */,
@@ -228,11 +260,15 @@
 				D1CFF28622271DA50034FE9F /* LogsVC.swift in Sources */,
 				D1C5F25D222F022F000E8887 /* LoginModel.swift in Sources */,
 				D1CFF28222271D180034FE9F /* IndicesVC.swift in Sources */,
+				EBDE447B2230F8480029A144 /* KSE30VC.swift in Sources */,
 				EB2DAF67222FE458002AF0E1 /* BasicAlert.swift in Sources */,
 				D1CFF2692227159D0034FE9F /* AppDelegate.swift in Sources */,
 				D1C5F258222EFF4C000E8887 /* TabbarVC.swift in Sources */,
 				D1CFF28422271D900034FE9F /* PortfolioVC.swift in Sources */,
+				EBDE447D2230F8870029A144 /* KMI30VC.swift in Sources */,
+				EBDE44842230F9B50029A144 /* KMI30Cell.swift in Sources */,
 				EBC44ABA22300833000F9666 /* ResetPasswordVC.swift in Sources */,
+				EBDE44792230F75B0029A144 /* FavVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
