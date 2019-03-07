@@ -135,33 +135,64 @@
                                     <segment title="GAINERS"/>
                                     <segment title="LOOSERS"/>
                                 </segments>
-                                <color key="tintColor" red="1" green="0.25098039215686274" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segmentedControllPressed:" destination="vVw-uc-Enf" eventType="valueChanged" id="jLN-YP-moi"/>
+                                </connections>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rX4-jO-Pgs">
+                            <containerView opaque="NO" contentMode="scaleToFill" restorationIdentifier="LeadersVC" translatesAutoresizingMaskIntoConstraints="NO" id="NPJ-65-d8c">
                                 <rect key="frame" x="0.0" y="155" width="375" height="463"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
+                                <connections>
+                                    <segue destination="UBa-Id-8TN" kind="embed" id="ooR-jz-kIN"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbg-qp-4kH">
+                                <rect key="frame" x="0.0" y="155" width="375" height="463"/>
+                                <connections>
+                                    <segue destination="RFf-J1-oop" kind="embed" id="c0z-7W-Bps"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" restorationIdentifier="LooserVC" translatesAutoresizingMaskIntoConstraints="NO" id="BQW-MB-aJR">
+                                <rect key="frame" x="0.0" y="155" width="375" height="463"/>
+                                <connections>
+                                    <segue destination="qPa-dp-nEs" kind="embed" id="L3c-4R-YoT"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="TCc-Qm-ytl" secondAttribute="trailing" constant="5" id="2Y7-HA-3P4"/>
-                            <constraint firstItem="R20-mX-XfM" firstAttribute="bottom" secondItem="rX4-jO-Pgs" secondAttribute="bottom" id="795-d5-RD1"/>
+                            <constraint firstItem="R20-mX-XfM" firstAttribute="trailing" secondItem="NPJ-65-d8c" secondAttribute="trailing" id="4wQ-Pu-OSX"/>
+                            <constraint firstItem="R20-mX-XfM" firstAttribute="bottom" secondItem="NPJ-65-d8c" secondAttribute="bottom" id="5jq-oq-vFF"/>
                             <constraint firstItem="TCc-Qm-ytl" firstAttribute="leading" secondItem="R20-mX-XfM" secondAttribute="leading" constant="5" id="9sz-A5-Omx"/>
+                            <constraint firstItem="BQW-MB-aJR" firstAttribute="top" secondItem="TCc-Qm-ytl" secondAttribute="bottom" constant="10" id="ACF-rm-nRw"/>
                             <constraint firstItem="R20-mX-XfM" firstAttribute="trailing" secondItem="8B9-Dl-d4d" secondAttribute="trailing" id="Hcr-Aa-tZn"/>
-                            <constraint firstItem="R20-mX-XfM" firstAttribute="trailing" secondItem="rX4-jO-Pgs" secondAttribute="trailing" id="Mg9-Ek-4N0"/>
+                            <constraint firstItem="NPJ-65-d8c" firstAttribute="leading" secondItem="R20-mX-XfM" secondAttribute="leading" id="Lry-Mv-9Um"/>
+                            <constraint firstItem="NPJ-65-d8c" firstAttribute="top" secondItem="TCc-Qm-ytl" secondAttribute="bottom" constant="10" id="Rac-cr-Y3K"/>
+                            <constraint firstItem="mbg-qp-4kH" firstAttribute="leading" secondItem="R20-mX-XfM" secondAttribute="leading" id="Rc0-7d-eQ0"/>
+                            <constraint firstItem="R20-mX-XfM" firstAttribute="trailing" secondItem="mbg-qp-4kH" secondAttribute="trailing" id="VDq-wA-TCY"/>
+                            <constraint firstItem="mbg-qp-4kH" firstAttribute="top" secondItem="TCc-Qm-ytl" secondAttribute="bottom" constant="10" id="arb-iM-Fra"/>
                             <constraint firstItem="8B9-Dl-d4d" firstAttribute="top" secondItem="10V-xB-acS" secondAttribute="top" id="eFp-GM-RVz"/>
-                            <constraint firstItem="rX4-jO-Pgs" firstAttribute="top" secondItem="TCc-Qm-ytl" secondAttribute="bottom" constant="10" id="nXu-eI-uPp"/>
+                            <constraint firstItem="R20-mX-XfM" firstAttribute="bottom" secondItem="mbg-qp-4kH" secondAttribute="bottom" id="emk-F4-ZPc"/>
+                            <constraint firstItem="R20-mX-XfM" firstAttribute="bottom" secondItem="BQW-MB-aJR" secondAttribute="bottom" id="p2e-VJ-hJc"/>
+                            <constraint firstItem="R20-mX-XfM" firstAttribute="trailing" secondItem="BQW-MB-aJR" secondAttribute="trailing" id="qCu-ly-8Np"/>
                             <constraint firstItem="8B9-Dl-d4d" firstAttribute="leading" secondItem="10V-xB-acS" secondAttribute="leading" id="qiy-vL-LwP"/>
+                            <constraint firstItem="BQW-MB-aJR" firstAttribute="leading" secondItem="R20-mX-XfM" secondAttribute="leading" id="qra-71-eXa"/>
                             <constraint firstItem="TCc-Qm-ytl" firstAttribute="top" secondItem="8B9-Dl-d4d" secondAttribute="bottom" constant="10" id="v7R-Tu-ufb"/>
-                            <constraint firstItem="rX4-jO-Pgs" firstAttribute="leading" secondItem="R20-mX-XfM" secondAttribute="leading" id="wWc-fG-Eo2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R20-mX-XfM"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Movers" image="movers" id="bMS-Xw-wfM"/>
+                    <connections>
+                        <outlet property="gainerView" destination="NPJ-65-d8c" id="F27-uQ-4d3"/>
+                        <outlet property="leadersView" destination="mbg-qp-4kH" id="VzZ-1v-QAR"/>
+                        <outlet property="looserView" destination="BQW-MB-aJR" id="EUi-2O-2iw"/>
+                        <outlet property="segmentedView" destination="TCc-Qm-ytl" id="oly-F2-mKO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5p-5R-EpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-66" y="186"/>
+            <point key="canvasLocation" x="-66.400000000000006" y="185.75712143928038"/>
         </scene>
         <!--Market-->
         <scene sceneID="Bdx-tl-2uV">
@@ -731,6 +762,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Uff-A3-czm"/>
                     </view>
                     <size key="freeformSize" width="375" height="600"/>
                 </viewController>
@@ -851,6 +883,7 @@
                             <constraint firstItem="pgx-WD-kUD" firstAttribute="leading" secondItem="a6F-YH-kxD" secondAttribute="leading" id="oFH-iU-Ebx"/>
                             <constraint firstItem="pgx-WD-kUD" firstAttribute="top" secondItem="a6F-YH-kxD" secondAttribute="top" id="zae-01-kv6"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="C59-uT-Cng"/>
                     </view>
                     <size key="freeformSize" width="375" height="600"/>
                 </viewController>
@@ -964,12 +997,55 @@
                             <constraint firstItem="iGN-XC-wat" firstAttribute="leading" secondItem="tOM-b8-lsS" secondAttribute="leading" id="qxR-L1-Jm4"/>
                             <constraint firstAttribute="bottom" secondItem="iGN-XC-wat" secondAttribute="bottom" id="rHg-9d-sHu"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="AuK-Xk-wBe"/>
                     </view>
                     <size key="freeformSize" width="375" height="600"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BeY-xb-i3e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1274" y="-1142"/>
+        </scene>
+        <!--LeadersVC-->
+        <scene sceneID="Sg3-wQ-gN9">
+            <objects>
+                <viewController storyboardIdentifier="LeadersVC" id="UBa-Id-8TN" customClass="LeadersVC" customModule="iCandle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f4r-45-dS8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="463"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Vt-ed-dIZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-66" y="753"/>
+        </scene>
+        <!--GainerVC-->
+        <scene sceneID="bz9-wM-iuc">
+            <objects>
+                <viewController storyboardIdentifier="GainerVC" id="RFf-J1-oop" customClass="GainerVC" customModule="iCandle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hg5-lm-KLx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="463"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h5W-c4-zN0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="558" y="752"/>
+        </scene>
+        <!--LoosersVC-->
+        <scene sceneID="4BT-K1-8e1">
+            <objects>
+                <viewController storyboardIdentifier="LoosersVC" id="qPa-dp-nEs" customClass="LoosersVC" customModule="iCandle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1zl-Xe-eDJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="463"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Umu-B0-ukt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1175" y="752"/>
         </scene>
     </scenes>
     <resources>

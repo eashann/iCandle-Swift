@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D134C97E22319623004280F4 /* LeadersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D134C97D22319623004280F4 /* LeadersVC.swift */; };
+		D134C98022319643004280F4 /* GainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D134C97F22319643004280F4 /* GainerVC.swift */; };
+		D134C9822231965D004280F4 /* LoosersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D134C9812231965D004280F4 /* LoosersVC.swift */; };
 		D1C5F256222EFEEC000E8887 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C5F255222EFEEC000E8887 /* LoginVC.swift */; };
 		D1C5F258222EFF4C000E8887 /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C5F257222EFF4C000E8887 /* TabbarVC.swift */; };
 		D1C5F25A222F01CB000E8887 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C5F259222F01CB000E8887 /* Constant.swift */; };
@@ -30,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D134C97D22319623004280F4 /* LeadersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadersVC.swift; sourceTree = "<group>"; };
+		D134C97F22319643004280F4 /* GainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GainerVC.swift; sourceTree = "<group>"; };
+		D134C9812231965D004280F4 /* LoosersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoosersVC.swift; sourceTree = "<group>"; };
 		D1C5F255222EFEEC000E8887 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		D1C5F257222EFF4C000E8887 /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
 		D1C5F259222F01CB000E8887 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -72,6 +78,23 @@
 				EB2DAF66222FE458002AF0E1 /* BasicAlert.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D134C97C223195D6004280F4 /* Movers */ = {
+			isa = PBXGroup;
+			children = (
+				D134C97D22319623004280F4 /* LeadersVC.swift */,
+				D134C97F22319643004280F4 /* GainerVC.swift */,
+				D134C9812231965D004280F4 /* LoosersVC.swift */,
+			);
+			path = Movers;
+			sourceTree = "<group>";
+		};
+		D134C98322319C01004280F4 /* Logs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logs;
 			sourceTree = "<group>";
 		};
 		D1C5F253222EFEBC000E8887 /* Auth */ = {
@@ -139,9 +162,11 @@
 		D1CFF27A222715CA0034FE9F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D134C98322319C01004280F4 /* Logs */,
 				D1C5F253222EFEBC000E8887 /* Auth */,
 				D1C5F254222EFEC6000E8887 /* Main */,
 				EBDE44772230F7300029A144 /* Market */,
+				D134C97C223195D6004280F4 /* Movers */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -254,11 +279,14 @@
 			files = (
 				EBDE44822230F9A00029A144 /* KSE30Cell.swift in Sources */,
 				D1CFF27E22271CB80034FE9F /* MarketVC.swift in Sources */,
+				D134C9822231965D004280F4 /* LoosersVC.swift in Sources */,
 				D1CFF28022271CF20034FE9F /* MoversVC.swift in Sources */,
 				D1C5F25A222F01CB000E8887 /* Constant.swift in Sources */,
+				D134C98022319643004280F4 /* GainerVC.swift in Sources */,
 				D1C5F256222EFEEC000E8887 /* LoginVC.swift in Sources */,
 				D1CFF28622271DA50034FE9F /* LogsVC.swift in Sources */,
 				D1C5F25D222F022F000E8887 /* LoginModel.swift in Sources */,
+				D134C97E22319623004280F4 /* LeadersVC.swift in Sources */,
 				D1CFF28222271D180034FE9F /* IndicesVC.swift in Sources */,
 				EBDE447B2230F8480029A144 /* KSE30VC.swift in Sources */,
 				EB2DAF67222FE458002AF0E1 /* BasicAlert.swift in Sources */,

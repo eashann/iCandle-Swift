@@ -9,7 +9,5 @@
 import Foundation
 
 struct LoginModel {
-    static var userID   = String()
-    static var password = String()
-    static var uuid     = String()
+    static var clientCode = String()
 }
