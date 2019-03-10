@@ -17,7 +17,10 @@ class MarketVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        segmentControlOutlet.selectedSegmentIndex = 0
+        segmentControlOutlet.selectedSegmentIndex = 1
+        KSE30View.alpha = 1
+        favView.alpha   = 0
+        KMI30VIew.alpha = 0
     }
     
     // USER INTERFACE

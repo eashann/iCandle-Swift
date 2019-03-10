@@ -10,24 +10,27 @@ import UIKit
 
 class KSE30VC: UIViewController {
     
-    var scripArr    = [String]()
-    var marketArr   = [String]()
-    var nameArr     = [String]()
-    var upperCapArr = [String]()
-    var lowerCapArr = [String]()
-    var KSE30Arr    = [String]()
-    var KMI30Arr    = [String]()
+    @IBOutlet weak var KSE30TableView: UITableView!
+    
+    var kseScripArr    = [String]()
+    var kseMarketArr   = [String]()
+    var kseNameArr     = [String]()
+    var kseUpperCapArr = [String]()
+    var kseLowerCapArr = [String]()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getKSE30APICall()
+        KSE30TableView.delegate   = self
+        KSE30TableView.dataSource = self
+        fetchKSEData()
     }
     
     func getKSE30APICall() {
-        
         let headers = [
+            "Content-Type": "application/x-www-form-urlencoded",
             "cache-control": "no-cache",
-            "Postman-Token": "f13f6bfd-c770-4196-ae7c-bc46adcf0487"
+            "Postman-Token": "42fd13b6-ef92-4c9a-8661-4623ac389184"
         ]
         
         let postData = NSMutableData(data: "ClientCode=C4952".data(using: String.Encoding.utf8)!)
@@ -43,20 +46,17 @@ class KSE30VC: UIViewController {
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
             if (error != nil) {
-                DispatchQueue.main.async {
-                    Alert.showBasicAlert(on: self, with: "Can't fetch your data.", message: "Something went wrong, please try again later.")
-                    print(error as Any)
-                }
+                print(error as Any)
             } else {
                 let httpResponse = response as? HTTPURLResponse
-                print(httpResponse as Any)
+                print(httpResponse?.statusCode as Any)
+                
                 if let data = data {
                     do {
-                        let json = try JSONSerialization.jsonObject(with: data, options: [])
-                        print(json)
+                        let json = try JSONSerialization.jsonObject(with: data, options:[])
+                        print("KSE 30 API: \(json)")
                     } catch {
                         DispatchQueue.main.async {
-                            Alert.showBasicAlert(on: self, with: "Can't fetch your data.", message: "Something went wrong, please try again later.")
                             print("error:\(error)")
                         }
                     }
@@ -65,5 +65,79 @@ class KSE30VC: UIViewController {
         })
         
         dataTask.resume()
+    }
+    
+    func fetchKSEData() {
+        if let path = Bundle.main.path(forResource: "mover", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                print("KSE 30 API: \(jsonResult)")
+                if let dict = jsonResult as? [[String:Any]] {
+                    for kse in dict {
+                        if let indexKMI30 = kse["IndexKMI30"] as? Int {
+                            if (indexKMI30 == 0) {
+                                
+                                if let scripe = kse["Scrip"] as? String {
+                                    self.kseScripArr.append(scripe)
+                                } else {
+                                    self.kseScripArr.append("-")
+                                }
+                                
+                                if let market = kse["Market"] as? String {
+                                    self.kseMarketArr.append(market)
+                                } else {
+                                    self.kseMarketArr.append("-")
+                                }
+                                
+                                if let name = kse["Name"] as? String {
+                                    self.kseNameArr.append(name)
+                                } else {
+                                    self.kseNameArr.append("-")
+                                }
+                                
+                                if let upperCap = kse["UpperCap"] as? String {
+                                    self.kseUpperCapArr.append(upperCap)
+                                } else {
+                                    self.kseUpperCapArr.append("-")
+                                }
+                                
+                                if let lowerCap = kse["LowerCap"] as? String {
+                                    self.kseLowerCapArr.append(lowerCap)
+                                } else {
+                                    self.kseLowerCapArr.append("-")
+                                }
+                                
+                            } else {
+                                print("Not KSE30")
+                            }
+                        }
+                    }
+                    
+                    DispatchQueue.main.async {
+                        self.KSE30TableView.reloadData()
+                    }
+                }
+            } catch {
+                print("error:\(error)")
+            }
+        }
+    }
+}
+
+extension KSE30VC: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return kseScripArr.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = KSE30TableView.dequeueReusableCell(withIdentifier: "KSE30Cell") as! KSE30Cell
+        cell.scripLabel.text    = kseScripArr[indexPath.row]
+        cell.marketLabel.text   = kseMarketArr[indexPath.row]
+        cell.nameLabel.text     = kseNameArr[indexPath.row]
+        //cell.upperCapLabel.text = kseUpperCapArr[indexPath.row]
+        //cell.lowerCapLabel.text = kseLowerCapArr[indexPath.row]
+        return cell
     }
 }
