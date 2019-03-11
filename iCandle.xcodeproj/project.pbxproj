@@ -42,6 +42,7 @@
 		D1F8117D2233F4BA00271BCD /* HoldingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F8117C2233F4BA00271BCD /* HoldingVC.swift */; };
 		D1F8117F2233F4DD00271BCD /* CollateralsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F8117E2233F4DD00271BCD /* CollateralsVC.swift */; };
 		D1F811812233F4EF00271BCD /* OpenPositionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F811802233F4EF00271BCD /* OpenPositionVC.swift */; };
+		EB28CB1A223683CE006EE97D /* NewsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB28CB19223683CE006EE97D /* NewsTabView.swift */; };
 		EB2DAF67222FE458002AF0E1 /* BasicAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2DAF66222FE458002AF0E1 /* BasicAlert.swift */; };
 		EB96957922329E9E005D4A03 /* WorkingOrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB96957822329E9E005D4A03 /* WorkingOrderVC.swift */; };
 		EB96957B22329EC4005D4A03 /* TradeOrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB96957A22329EC4005D4A03 /* TradeOrderVC.swift */; };
@@ -95,6 +96,7 @@
 		D1F8117C2233F4BA00271BCD /* HoldingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingVC.swift; sourceTree = "<group>"; };
 		D1F8117E2233F4DD00271BCD /* CollateralsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollateralsVC.swift; sourceTree = "<group>"; };
 		D1F811802233F4EF00271BCD /* OpenPositionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPositionVC.swift; sourceTree = "<group>"; };
+		EB28CB19223683CE006EE97D /* NewsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTabView.swift; sourceTree = "<group>"; };
 		EB2DAF66222FE458002AF0E1 /* BasicAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAlert.swift; sourceTree = "<group>"; };
 		EB96957822329E9E005D4A03 /* WorkingOrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingOrderVC.swift; sourceTree = "<group>"; };
 		EB96957A22329EC4005D4A03 /* TradeOrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeOrderVC.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				D1CFF28122271D180034FE9F /* IndicesVC.swift */,
 				D1CFF28322271D900034FE9F /* PortfolioVC.swift */,
 				D1CFF28522271DA50034FE9F /* LogsVC.swift */,
+				EB28CB19223683CE006EE97D /* NewsTabView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				D134C9822231965D004280F4 /* LoosersVC.swift in Sources */,
 				D1CFF28022271CF20034FE9F /* MoversVC.swift in Sources */,
 				D1C5F25A222F01CB000E8887 /* Constant.swift in Sources */,
+				EB28CB1A223683CE006EE97D /* NewsTabView.swift in Sources */,
 				D191EB33223465E9001D1ED4 /* CollateralsCell.swift in Sources */,
 				D134C98022319643004280F4 /* GainerVC.swift in Sources */,
 				EB96958022329F6C005D4A03 /* WorkingOrderCell.swift in Sources */,

@@ -9,6 +9,10 @@
 import UIKit
 
 class BoardMeetingCell: UITableViewCell {
+    
+    @IBOutlet weak var scripCompanyLabel: UILabel!
+    @IBOutlet weak var annoucementDate: UILabel!
+    @IBOutlet weak var allTextLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

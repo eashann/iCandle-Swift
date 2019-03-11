@@ -134,7 +134,9 @@ class LoginVC: UIViewController {
     }
     
     private func toMainControllerVC() {
-        let toMainControllerVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabbarVC") as! TabbarVC
+//        let toMainControllerVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabbarVC") as! TabbarVC
+//        self.present(toMainControllerVC, animated: false, completion: nil)
+        let toMainControllerVC: UIViewController = UIStoryboard(name: "News", bundle: nil).instantiateViewController(withIdentifier: "NewsTabView") as! NewsTabView
         self.present(toMainControllerVC, animated: false, completion: nil)
     }
 }
