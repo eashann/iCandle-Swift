@@ -18,6 +18,9 @@ class LoginVC: UIViewController {
     @IBOutlet weak var passwordTextView: UIView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
+    var clientCodes = [String]()
+    var userID      = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         userIDTextfield.delegate   = self
@@ -64,9 +67,10 @@ class LoginVC: UIViewController {
                 if let data = data {
                     do {
                         let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers)
-                        
+                        print(json)
                         if let dict = json as? [String:AnyObject] {
                             if let loginResponse = dict["success"] as? [String:Any] {
+                                
                                 if let enableLogin = loginResponse["LoginResponse"] as? String {
                                     if (enableLogin == "true") {
                                         DispatchQueue.main.async {
@@ -83,6 +87,27 @@ class LoginVC: UIViewController {
                                     DispatchQueue.main.async {
                                         self.spinnerOFF()
                                         Alert.showBasicAlert(on: self, with: "Login Failed", message: "Something went wrong, please try again later.")
+                                    }
+                                }
+                                
+                                if let accounts = loginResponse["Accounts"] as? [[String:Any]] {
+                                    for account in accounts {
+                                        if let clientCode = account["ClientCode"] as? String {
+                                            self.clientCodes.append(clientCode)
+                                        } else {
+                                            self.clientCodes.append("-")
+                                        }
+                                        
+                                        if let userID = account["UserID"] as? String {
+                                            self.userID.append(userID)
+                                        } else {
+                                            self.userID.append("-")
+                                        }
+                                    }
+                                    
+                                    DispatchQueue.main.async {
+                                        LoginModel.clientCode = self.clientCodes[0]
+                                        LoginModel.currentID  = self.userID[0]
                                     }
                                 }
                             }
@@ -128,15 +153,24 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func forgotPasswordPressed(_ sender: UIButton) {
+
     }
     
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
     }
     
-    private func toMainControllerVC() {
-//        let toMainControllerVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabbarVC") as! TabbarVC
-//        self.present(toMainControllerVC, animated: false, completion: nil)
+    private func toChangePassword() {
+        let toMainControllerVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResetPasswordVC") as! ResetPasswordVC
+        self.present(toMainControllerVC, animated: false, completion: nil)
+    }
+    
+    private func toNewsSection() {
         let toMainControllerVC: UIViewController = UIStoryboard(name: "News", bundle: nil).instantiateViewController(withIdentifier: "NewsTabView") as! NewsTabView
+        self.present(toMainControllerVC, animated: false, completion: nil)
+    }
+    
+    private func toMainControllerVC() {
+        let toMainControllerVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabbarVC") as! TabbarVC
         self.present(toMainControllerVC, animated: false, completion: nil)
     }
 }

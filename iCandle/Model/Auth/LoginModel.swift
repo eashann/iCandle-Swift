@@ -10,4 +10,5 @@ import Foundation
 
 struct LoginModel {
     static var clientCode = String()
+    static var currentID  = String()
 }

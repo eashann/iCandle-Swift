@@ -24,7 +24,7 @@ class MarketVC: UIViewController {
     }
     
     // USER INTERFACE
-    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
+    override var prefersStatusBarHidden: Bool { return true }
     
     @IBAction func segmentedControlPressed(_ sender: UISegmentedControl) {
         
@@ -41,5 +41,10 @@ class MarketVC: UIViewController {
             favView.alpha   = 0
             KSE30View.alpha = 0
         }
+    }
+    
+    @IBAction func rightMoreButtonPressed(_ sender: UIButton) {
+            let toMainControllerVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResetPasswordVC") as! ResetPasswordVC
+            self.present(toMainControllerVC, animated: false, completion: nil)
     }
 }

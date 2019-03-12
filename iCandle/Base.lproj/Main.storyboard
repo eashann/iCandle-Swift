@@ -228,6 +228,10 @@
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="moe"/>
+                                        <connections>
+                                            <action selector="rightMenuButtonPressed:" destination="MMm-Sg-7Qv" eventType="touchUpInside" id="s6A-hj-Wyu"/>
+                                            <action selector="rightMoreButtonPressed:" destination="qUf-Vp-pTG" eventType="touchUpInside" id="IeH-Qt-403"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABC Securities" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbb-Cn-U9j">
                                         <rect key="frame" x="60" y="66" width="288" height="28"/>
@@ -324,6 +328,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kBq-hB-sxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MMm-Sg-7Qv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-66.400000000000006" y="-471.8140929535233"/>
         </scene>
@@ -759,6 +764,9 @@
                                 </constraints>
                                 <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="nav_left_icon"/>
+                                <connections>
+                                    <action selector="dismissView:" destination="OPJ-Jh-EB8" eventType="touchUpInside" id="hy9-5B-M63"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo128" translatesAutoresizingMaskIntoConstraints="NO" id="hLa-FG-70d">
                                 <rect key="frame" x="137.5" y="98" width="100" height="100"/>
@@ -844,6 +852,9 @@
                                 <state key="normal" title="Send">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendButtonPressed:" destination="OPJ-Jh-EB8" eventType="touchUpInside" id="G29-po-mOU"/>
+                                </connections>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="0HK-6u-EdT">
                                 <rect key="frame" x="147" y="386" width="20" height="20"/>
@@ -875,6 +886,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SW4-Ue-rCr"/>
                     </view>
+                    <connections>
+                        <outlet property="confirmPassword" destination="BHV-H3-LUM" id="A47-sT-YP2"/>
+                        <outlet property="currentPasswordTextfield" destination="ScC-i4-fqv" id="er0-pl-J6v"/>
+                        <outlet property="newPasswordTextfield" destination="VXb-uI-7lh" id="fZ9-LZ-Drd"/>
+                        <outlet property="sendButtonOutlet" destination="OFH-mJ-EqG" id="7oC-Ke-4vZ"/>
+                        <outlet property="spinner" destination="0HK-6u-EdT" id="Gsc-7z-KaM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TIs-Mb-xF7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1930,6 +1948,7 @@
                             <constraint firstAttribute="bottom" secondItem="Ejo-R8-875" secondAttribute="bottom" id="pxr-1x-RM7"/>
                             <constraint firstItem="Ejo-R8-875" firstAttribute="leading" secondItem="r2z-LB-Lde" secondAttribute="leading" id="uHG-JQ-pZE"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="OZ0-BU-KU7"/>
                     </view>
                     <connections>
                         <outlet property="summaryTableView" destination="Ejo-R8-875" id="PHk-Qa-Erx"/>
@@ -2091,6 +2110,7 @@
                             <constraint firstAttribute="bottom" secondItem="bRE-ZQ-miy" secondAttribute="bottom" id="byW-WR-nuS"/>
                             <constraint firstAttribute="trailing" secondItem="bRE-ZQ-miy" secondAttribute="trailing" id="pJ6-Wd-IiO"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="vjE-RN-GAD"/>
                     </view>
                     <connections>
                         <outlet property="holdingTableView" destination="bRE-ZQ-miy" id="gaV-Lb-I0R"/>
@@ -2283,6 +2303,7 @@
                             <constraint firstAttribute="bottom" secondItem="reu-xX-8ti" secondAttribute="bottom" id="c3o-rM-hJk"/>
                             <constraint firstItem="reu-xX-8ti" firstAttribute="leading" secondItem="jBO-hr-05A" secondAttribute="leading" id="dHn-Qn-71z"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="JZb-0h-haF"/>
                     </view>
                     <connections>
                         <outlet property="collateralsTableView" destination="reu-xX-8ti" id="MXl-fZ-7yI"/>
@@ -2444,6 +2465,7 @@
                             <constraint firstItem="Bla-eS-6Db" firstAttribute="leading" secondItem="9Xa-B7-yM2" secondAttribute="leading" id="Xrk-ST-myd"/>
                             <constraint firstAttribute="bottom" secondItem="Bla-eS-6Db" secondAttribute="bottom" id="xZG-cK-5D3"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="j8w-sg-uA0"/>
                     </view>
                     <connections>
                         <outlet property="openPositionTableView" destination="Bla-eS-6Db" id="npc-ol-INC"/>
